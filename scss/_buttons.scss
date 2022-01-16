@@ -15,9 +15,10 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   background-color: transparent;
-  border: $btn-border-width solid transparent;
+  //border: $btn-border-width solid transparent;
+  border: none;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
-  @include transition($btn-transition);
+  //@include transition($btn-transition);
 
   &:hover {
     color: $body-color;
@@ -27,17 +28,17 @@
   .btn-check:focus + &,
   &:focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
+    //box-shadow: $btn-focus-box-shadow;
   }
 
   .btn-check:checked + &,
   .btn-check:active + &,
   &:active,
   &.active {
-    @include box-shadow($btn-active-box-shadow);
+    //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
 
@@ -46,7 +47,7 @@
   fieldset:disabled & {
     pointer-events: none;
     opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
+    //@include box-shadow(none);
   }
 }
 
